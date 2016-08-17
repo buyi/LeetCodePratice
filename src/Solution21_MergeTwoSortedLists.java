@@ -14,6 +14,7 @@ public class Solution21_MergeTwoSortedLists {
 				   } else {
 					   target.next = l1;
 					   l1 = l1.next;
+					   target = target.next;
 				   }
 			
 			   } else if (l1.val > l2.val) {
@@ -24,10 +25,11 @@ public class Solution21_MergeTwoSortedLists {
 				   } else {
 					   target.next = l2;
 					   l2 = l2.next;
+					   target = target.next;
 				   }
 				  
 			   }
-			   target = target.next;
+//			   target = target.next;
 		   }
 		   
 		   if (l1 == null) {
