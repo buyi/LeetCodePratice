@@ -1,5 +1,37 @@
 
 public class Solution27_RemoveElement {
+	public int removeElement2(int[] A, int elem) {
+		   int i=0;
+	    int j=0;
+	 
+	    while(j < A.length){
+	        if(A[j] != elem){
+	            A[i] = A[j];
+	            i++; 
+	        }
+	 
+	        j++;
+	    }
+	 
+	    return i;
+		}
+	
+	int removeElement(int A[], int n, int elem) {
+	    int ex = -1;
+	    int len = n;
+	    for (int i = 0; i < n; i++) {
+	        if (A[i] == elem) {
+	            len--;
+	            if (ex < 0)
+	                ex = i;
+	        }
+	        else if (ex >= 0) {
+	            A[ex] = A[i];
+	            ex++;
+	        }
+	    }
+	    return len;
+	}
 	   public int removeElement(int[] nums, int val) {
 //		   Hash
 		   
